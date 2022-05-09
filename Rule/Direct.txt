@@ -6066,7 +6066,6 @@ DOMAIN-SUFFIX,5bite.com
 DOMAIN-SUFFIX,5biying.com
 DOMAIN-SUFFIX,5bong.com
 DOMAIN-SUFFIX,5bug.wang
-DOMAIN-SUFFIX,5caicloud.com
 DOMAIN-SUFFIX,5ccc.net
 DOMAIN-SUFFIX,5ce.com
 DOMAIN-SUFFIX,5ceimg.com
@@ -9590,7 +9589,6 @@ DOMAIN-SUFFIX,aicheren.com
 DOMAIN-SUFFIX,aicili.pw
 DOMAIN-SUFFIX,aiclicash.com
 DOMAIN-SUFFIX,aiclk.com
-DOMAIN-SUFFIX,aicloud.com
 DOMAIN-SUFFIX,aicode.cc
 DOMAIN-SUFFIX,aicoinstorge.com
 DOMAIN-SUFFIX,aicsnet.com
@@ -33436,8 +33434,6 @@ DOMAIN-SUFFIX,ickey.cc
 DOMAIN-SUFFIX,ickimg.com
 DOMAIN-SUFFIX,iclicash.com
 DOMAIN-SUFFIX,iclickstatic.com
-DOMAIN-SUFFIX,icloudnews.net
-DOMAIN-SUFFIX,iclouds.work
 DOMAIN-SUFFIX,icmade.com
 DOMAIN-SUFFIX,icme14.org
 DOMAIN-SUFFIX,icmginc.com
