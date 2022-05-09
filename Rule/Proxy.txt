@@ -1,0 +1,16 @@
+DOMAIN-SUFFIX,gstatic.com
+DOMAIN-SUFFIX,google.cn
+DOMAIN-SUFFIX,googleapis.com
+DOMAIN-SUFFIX,google-analytics.com
+DOMAIN-SUFFIX,google.com
+DOMAIN-SUFFIX,googlesyndication.com
+DOMAIN-SUFFIX,googletagservices.com
+DOMAIN-SUFFIX,googletagmanager.com
+DOMAIN-SUFFIX,googleusercontent.com
+DOMAIN-SUFFIX,paypal.com
+DOMAIN-SUFFIX,paypal.me
+DOMAIN-KEYWORD,paypalobjects
+DOMAIN-SUFFIX,msftncsi.com
+DOMAIN-SUFFIX,agemys.com
+DOMAIN,ubistatic3-a.akamaihd.net
+DOMAIN,fr.slotheve.eu.org
