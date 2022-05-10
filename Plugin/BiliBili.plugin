@@ -1,5 +1,6 @@
 #!name= BiliBili
 #!desc= 哔哩哔哩精简
+#!icon=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/bilibili.png
 
 [Rule]
 # Bilibili
