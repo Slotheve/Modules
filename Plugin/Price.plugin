@@ -1,5 +1,6 @@
 #!name= Price
 #!desc= 比价
+#!icon=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Pig.png
 
 [Script]
 # 京东淘宝比价
