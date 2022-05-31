@@ -12,3 +12,9 @@ DOMAIN-SUFFIX,applemx-icloud.com
 aDOMAIN-SUFFIX,aplimg.com
 DOMAIN-KEYWORD,apple.com.edgekey.net
 DOMAIN,store.apple.com.edgekey.net.globalredir.akadns.net
+URL-REGEX,^a[1-5]\.mzstatic\.com
+URL-REGEX,^cdn(-cn)?[1-4]?\.apple-mapkit\.com
+URL-REGEX,^cl[1-5]-cdn\.origin-apple\.com\.akadns\.net
+URL-REGEX,^cl[1-5]\.apple\.com
+URL-REGEX,^is[1-5](-ssl)?\.mzstatic\.com
+URL-REGEX,^s[1-5]?\.mzstatic\.com
