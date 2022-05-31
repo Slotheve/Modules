@@ -15487,7 +15487,6 @@ DOMAIN-SUFFIX,cdn-okzyw.com
 DOMAIN-SUFFIX,cdn-speed.com
 DOMAIN-SUFFIX,cdn-tudou.com
 DOMAIN-SUFFIX,cdn-v.com
-DOMAIN-SUFFIX,cdn.jsdelivr.net
 DOMAIN-SUFFIX,cdn.marketplaceimages.windowsphone.com
 DOMAIN-SUFFIX,cdn.razersynapse.com
 DOMAIN-SUFFIX,cdn.samsung.com

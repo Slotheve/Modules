@@ -10,7 +10,4 @@ DOMAIN-SUFFIX,googleusercontent.com
 DOMAIN-SUFFIX,paypal.com
 DOMAIN-SUFFIX,paypal.me
 DOMAIN-KEYWORD,paypalobjects
-DOMAIN-SUFFIX,msftncsi.com
 DOMAIN-SUFFIX,agemys.com
-DOMAIN,ubistatic3-a.akamaihd.net
-DOMAIN,fr.slotheve.eu.org
