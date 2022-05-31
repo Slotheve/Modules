@@ -6,4 +6,4 @@
 hostname=testflight.apple.com
 
 [Script]
-http-request ^https?:\/\/testflight\.apple\.com\/v2\/accounts\/.*\/apps\/\d*/builds/\d*/install ,requires-body=true, timeout=10, tag=TF软件更新,script-path=https://raw.githubusercontent.com/Slotheve/Loon/main/JS/tf.js,enabled=true
+http-request ^https?:\/\/testflight\.apple\.com\/v2\/accounts\/.*\/apps\/\d*/builds/\d*/install ,requires-body=true, timeout=10, tag=TF软件更新,script-path=https://raw.githubusercontent.com/Slotheve/Loon/main/JS/patchtf.js,enabled=true
