@@ -1,5 +1,5 @@
-#!name= TF解限
-#!desc= 仅适用于Loon, 解除TF区域限制.
+#!name= TestFlight Patch
+#!desc= 解除TF区域限制.
 #!icon=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/TestFlight_2.png
 
 [Mitm]
