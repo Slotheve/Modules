@@ -1,9 +1,0 @@
-#!name= TestFlight Patch
-#!desc= 解除TF区域限制.
-#!icon=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/TestFlight_2.png
-
-[Mitm]
-hostname=testflight.apple.com
-
-[Script]
-http-request ^https?:\/\/testflight\.apple\.com\/v2\/accounts\/.*\/apps\/\d*/builds/\d*/install ,requires-body=true, timeout=10, tag=TF软件更新,script-path=https://raw.githubusercontent.com/Slotheve/Loon/main/JS/patchtf.js,enabled=true
