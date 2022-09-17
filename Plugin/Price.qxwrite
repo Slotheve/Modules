@@ -1,8 +1,3 @@
-# 京东历史价格
 ^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig) url script-response-body https://raw.githubusercontent.com/Slotheve/Loon-QX/main/JS/JDPrice.js
 
-# 淘宝比价
-^http:\/\/.+\/amdc\/mobileDispatch url script-response-body https://raw.githubusercontent.com/Slotheve/Loon-QX/main/JS/TBPrice.js
-^https?:\/\/trade-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.detail\.getdetail url script-response-body https://raw.githubusercontent.com/Slotheve/Loon-QX/main/JS/TBPrice.js
-
-hostname = trade-acs.m.taobao.com,api.m.jd.com
+hostname = api.m.jd.com
