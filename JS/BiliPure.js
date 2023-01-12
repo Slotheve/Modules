@@ -1,3 +1,6 @@
+/*
+自用B站去广告脚本
+*/
 const scriptName = "BiliBili";
 const storyAidKey = "bilibili_story_aid";
 const blackKey = "bilibili_feed_black";
@@ -41,7 +44,7 @@ if (magicJS.read(blackKey)) {
               !item.hasOwnProperty("ad_info") &&
               !blacklist.includes(item["args"]["up_name"]) &&
               item.card_goto.indexOf("ad") === -1 &&
-              (item["card_type"] === "small_cover_v2" || item["card_type"] === "large_cover_v1")
+              (item["card_type"] === "small_cover_v2" || item["card_type"] === "large_cover_v1"|| item["card_type"] === "large_cover_single_v9")
             ) {
               items.push(item);
             }
@@ -56,45 +59,34 @@ if (magicJS.read(blackKey)) {
       case /^https:\/\/app\.bilibili\.com\/x\/v2\/feed\/index\/story\?/.test(magicJS.request.url):
         try {
           let obj = JSON.parse(magicJS.response.body);
-          let lastItem = obj["data"]["items"].pop();
-          let aid = lastItem["stat"]["aid"].toString();
-          magicJS.write(storyAidKey, aid);
+          let items = [];
+          for (let item of obj["data"]["items"]) {
+            if (
+              !item.hasOwnProperty("ad_info") &&
+              item.card_goto.indexOf("ad") === -1) {
+              items.push(item);
+            }
+          }
+          obj["data"]["items"] = items;
+          body = JSON.stringify(obj);
         } catch (err) {
           magicJS.logError(`记录Story的aid出现异常：${err}`);
         }
         break;
-      // 开屏广告处理
-      case /^https?:\/\/app\.bilibili\.com\/x\/v2\/splash\/list/.test(magicJS.request.url):
-        try {
-          let obj = JSON.parse(magicJS.response.body);
-          obj["data"]["max_time"] = 0;
-          obj["data"]["min_interval"] = 31536000;
-          obj["data"]["pull_interval"] = 31536000;
-          for (let i = 0; i < obj["data"]["list"].length; i++) {
-            obj["data"]["list"][i]["duration"] = 0;
-            obj["data"]["list"][i]["begin_time"] = 1915027200;
-            obj["data"]["list"][i]["end_time"] = 1924272000;
-          }
-          body = JSON.stringify(obj);
-        } catch (err) {
-          magicJS.logError(`开屏广告处理出现异常：${err}`);
-        }
-        break;
+      
       // 标签页处理，如去除会员购等等
       case /^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/tab/.test(magicJS.request.url):
         try {
-          // 545 首页追番tab，442 开始为概念版id 适配港澳台代理模式
-          const tabList = new Set([39, 40, 41, 545, 151, 442, 99, 100, 101, 554, 556]);
-          // 尝试使用tab name直观修改
-          const tabNameList = new Set(["直播", "推荐", "热门", "追番", "影视"]);
-          // 107 概念版游戏中心，获取修改为Story模式
-          const topList = new Set([176, 222, 107]);
-          // 102 开始为概念版id
-          const bottomList = new Set([177, 178, 179, 181, 102, 103, 104, 105, 106]);
+          
+          const tabList = new Set([39, 40, 41, 774, 857, 545, 151, 442, 99, 100, 101, 554, 556]);
+          
+          const topList = new Set([176, 107]);
+          
+          const bottomList = new Set([177, 178, 179, 181, 102,  104, 106, 486, 488, 489]);
           let obj = JSON.parse(magicJS.response.body);
           if (obj["data"]["tab"]) {
             let tab = obj["data"]["tab"].filter((e) => {
-              return tabNameList.has(e.name);
+              return tabList.has(e.id);
             });
             obj["data"]["tab"] = tab;
           }
@@ -130,8 +122,8 @@ if (magicJS.read(blackKey)) {
       case /^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/mine/.test(magicJS.request.url):
         try {
           let obj = JSON.parse(magicJS.response.body);
-          // 622 为会员购中心, 425 开始为概念版id
-          const itemList = new Set([396, 397, 398, 399, 171, 172, 534, 8, 4, 428, 352, 1, 405, 402, 404, 544, 407, 410, 622, 425, 426, 427, 428, 171, 430, 431, 432]);
+          
+          const itemList = new Set([396, 397, 398, 399, 402, 404, 407, 410, 425, 426, 427, 428, 430, 432, 433, 434, 494, 495, 496, 497, 500, 501]);
           obj["data"]["sections_v2"].forEach((element, index) => {
             element["items"].forEach((e) => {
               if (e["id"] === 622) {
@@ -146,7 +138,41 @@ if (magicJS.read(blackKey)) {
             delete obj["data"]["sections_v2"][index].be_up_title;
             delete obj["data"]["sections_v2"][index].tip_icon;
             delete obj["data"]["sections_v2"][index].tip_title;
+            //2022-02-16 add by ddgksf2013
+            for (let ii = 0; ii < obj["data"]["sections_v2"].length; ii++) {
+              if(obj.data.sections_v2[ii].title=='推荐服务'||obj.data.sections_v2[ii].title=='推薦服務'){
+                //obj.data.sections_v2[ii].items[0].title='\u516C\u773E\u865F';
+                //obj.data.sections_v2[ii].items[1].title='\u58A8\u9B5A\u624B\u8A18';
+              }
+              if(obj.data.sections_v2[ii].title=='更多服務'||obj.data.sections_v2[ii].title=='更多服务'){
+                  if(obj.data.sections_v2[ii].items[0].id==500){
+                      //obj.data.sections_v2[ii].items[0].title='\u516C\u773E\u865F';
+                  }
+                  if(obj.data.sections_v2[ii].items[1].id==501){
+                      //obj.data.sections_v2[ii].items[1].title='\u58A8\u9B5A\u624B\u8A18';
+                  }
+              }
+              if(obj.data.sections_v2[ii].title=='创作中心'||obj.data.sections_v2[ii].title=='創作中心'){
+                  delete obj.data.sections_v2[ii].title;
+                  delete obj.data.sections_v2[ii].type;
+              }
+
+            }      
+            delete obj.data.vip_section_v2;
+            delete obj.data.vip_section;
             obj["data"]["sections_v2"][index]["items"] = items;
+            //2022-03-05 add by ddgksf2013
+            if(obj.data.hasOwnProperty("live_tip")){
+                obj["data"]["live_tip"]={};
+            }
+            if(obj.data.hasOwnProperty("answer")){
+                obj["data"]["answer"]={};
+            }
+            obj["data"]["vip_type"] = 2;
+            obj["data"]["vip"]["type"] = 2;
+            obj["data"]["vip"]["status"] = 1;
+            obj["data"]["vip"]["vip_pay_type"] = 1;
+            obj["data"]["vip"]["due_date"] = 4669824160;
           });
           body = JSON.stringify(obj);
         } catch (err) {
@@ -163,19 +189,75 @@ if (magicJS.read(blackKey)) {
           magicJS.logError(`直播去广告出现异常：${err}`);
         }
         break;
+        //屏蔽热搜
+        case /^https?:\/\/app\.bilibili\.com\/x\/v2\/search\/square/.test(magicJS.request.url):
+        try {
+          let obj = JSON.parse(magicJS.response.body);
+          obj.data={
+      "type": "history",
+      "title": "搜索历史",
+      "search_hotword_revision": 2
+    };
+          body = JSON.stringify(obj);
+        } catch (err) {
+          magicJS.logError(`热搜去广告出现异常：${err}`);
+        }
+        break;
+        //2022-03-05 add by ddgksf2013
+        case /https?:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo\?/.test(magicJS.request.url):
+        try {
+          let obj = JSON.parse(magicJS.response.body);
+          //magicJS.logInfo(`公众号墨鱼手记`);
+          obj["data"]["vip"]["type"] = 2;
+          obj["data"]["vip"]["status"] = 1;
+          obj["data"]["vip"]["vip_pay_type"] = 1;
+          obj["data"]["vip"]["due_date"] = 4669824160;
+          body = JSON.stringify(obj);
+        } catch (err) {
+          magicJS.logError(`1080P出现异常：${err}`);
+        }
+        break;
       // 追番去广告
-      case /^https?:\/\/api\.bilibili\.com\/pgc\/page\/bangumi/.test(magicJS.request.url):
+      case /pgc\/page\/bangumi/.test(magicJS.request.url):
         try {
           let obj = JSON.parse(magicJS.response.body);
           obj.result.modules.forEach((module) => {
             // 头部banner
             if (module.style.startsWith("banner")) {
-              module.items = module.items.filter((i) => !(i.source_content && i.source_content.ad_content));
+              //i.source_content && i.source_content.ad_content
+              module.items = module.items.filter((i) => !(i.link.indexOf("play")==-1));
+            }
+            if (module.style.startsWith("function")) {
+              module.items = module.items.filter((i) => (i.blink.indexOf("www.bilibili.com")==-1));
+            }
+            if (module.style.startsWith("tip")) {
+              module.items = null;
             }
           });
           body = JSON.stringify(obj);
         } catch (err) {
           magicJS.logError(`追番去广告出现异常：${err}`);
+        }
+        break;
+        // 观影页去广告
+      case /pgc\/page\/cinema\/tab\?/.test(magicJS.request.url):
+        try {
+          let obj = JSON.parse(magicJS.response.body);
+          obj.result.modules.forEach((module) => {
+            // 头部banner
+            if (module.style.startsWith("banner")) {
+              module.items = module.items.filter((i) => !(i.link.indexOf("play")==-1));
+            }
+            if (module.style.startsWith("function")) {
+              module.items = module.items.filter((i) => (i.blink.indexOf("www.bilibili.com")==-1));
+            }
+            if (module.style.startsWith("tip")) {
+              module.items = null;
+            }
+          });
+          body = JSON.stringify(obj);
+        } catch (err) {
+          magicJS.logError(`观影页去广告出现异常：${err}`);
         }
         break;
       // 动态去广告
@@ -203,12 +285,29 @@ if (magicJS.read(blackKey)) {
       case /^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/skin\?/.test(magicJS.request.url):
         try {
           let obj = JSON.parse(magicJS.response.body);
-          if (obj && obj.hasOwnProperty("data")) {
-            obj["data"]["common_equip"] = {};
+          if (obj && obj.hasOwnProperty("data")&&obj.data.hasOwnProperty("common_equip")&&obj.data.common_equip.hasOwnProperty("package_url")) {
+            //obj["data"]["common_equip"]["package_url"] = "";
           }
           body = JSON.stringify(obj);
         } catch (err) {
           magicJS.logError(`去除强制设置的皮肤出现异常：${err}`);
+        }
+        break;
+        // 开屏广告（预加载）如果粗暴地关掉，那么就使用预加载的数据，就会导致关不掉
+      case /^https:\/\/app\.bilibili\.com\/x\/v2\/splash\/list/.test(magicJS.request.url):
+        try {
+          let obj = JSON.parse(magicJS.response.body);
+          if(obj.data){
+          for (let item of obj["data"]["list"]) {
+              item["duration"] = 0;  // 显示时间
+              // 2040 年
+              item["begin_time"] = 2240150400;
+              item["end_time"] = 2240150400;
+          }
+          }
+          body = JSON.stringify(obj);
+        } catch (err) {
+          magicJS.logError(`开屏广告（预加载）出现异常：${err}`);
         }
         break;
       default:
