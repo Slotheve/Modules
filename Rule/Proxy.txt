@@ -7,7 +7,15 @@ DOMAIN-SUFFIX,googlesyndication.com
 DOMAIN-SUFFIX,googletagservices.com
 DOMAIN-SUFFIX,googletagmanager.com
 DOMAIN-SUFFIX,googleusercontent.com
+DOMAIN-SUFFIX,doubleclick.net
+DOMAIN-SUFFIX,googleadsserving.cn
 DOMAIN-SUFFIX,paypal.com
 DOMAIN-SUFFIX,paypal.me
-DOMAIN-KEYWORD,paypalobjects
+DOMAIN- KEYWORD,paypalobjects
 DOMAIN-SUFFIX,agemys.com
+DOMAIN-SUFFIX,short.weixin.qq.com
+DOMAIN-SUFFIX,extshort.weixin.qq.com
+DOMAIN-SUFFIX,epicgames.com
+DOMAIN-SUFFIX,nvidia.cn
+DOMAIN-SUFFIX,ubuntu.com
+DOMAIN-SUFFIX,ubuntu.cn
