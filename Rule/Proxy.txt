@@ -1,5 +1,5 @@
-DOMAIN-SUFFIX,gstatic.com
-DOMAIN-SUFFIX,google.cn
+DOMAIN-KEYWORD,gstatic
+DOMAIN-KEYWORD,google
 DOMAIN-SUFFIX,googleapis.com
 DOMAIN-SUFFIX,google-analytics.com
 DOMAIN-SUFFIX,google.com
