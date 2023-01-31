@@ -2,8 +2,8 @@
 #!desc= 京东比价脚本
 #!icon=https://raw.githubusercontent.com/Slotheve/Loon-QX/main/Pig.png
 
-[URL Rewrite]
-^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig) requires-body=1,script-path=JDPrice.js,tag=京东比价
+[Script]
+http-response ^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig) requires-body=1,script-path=JDPrice.js,tag=京东比价
 
 [MITM]
 hostname = api.m.jd.com
