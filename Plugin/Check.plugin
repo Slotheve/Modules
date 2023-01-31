@@ -1,7 +1,0 @@
-#!name= Stream Check & IP
-#!desc= 流媒体,IP归属地
-#!icon=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Netflix.png
-
-[Script]
-generic script-path=流媒体.js,tag=流媒体
-generic script-path=IP查询.js,tag=IP查询
