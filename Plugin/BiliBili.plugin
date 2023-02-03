@@ -1,5 +1,7 @@
 #!name= BiliBili Patch & Pure
 #!desc= 哔哩哔哩精简,破解
+#!author=Slotheve
+#!homepage=https://github.com/Slotheve/Loon-QX/
 #!icon=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/bilibili.png
 
 [Rule]
