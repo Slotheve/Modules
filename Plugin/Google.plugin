@@ -1,20 +1,20 @@
 #!name=GoogleRewrite
 #!desc=谷歌搜索重定向，将google.cn,google.h等重定向至google.com
 #!author=Slotheve
-#!homepage=https://github.com/zqzess/rule_for_quantumultX
+#!homepage=https://github.com/Slotheve/Loon-QX/
 #!icon=https://raw.githubusercontent.com/Slotheve/Loon-QX/main/Google.png
 [URL Rewrite]
 #hostname=*.google.com.hk ,*.g.cn,*.google.cn ,*.google.co.jp
 
-#^https?:\/\/(www.)?(g|google)\.cn https://www.google.com 302
-#^https:\/\/www\.google\.co\.jp https://www.google.com 302
-#^https:\/\/www\.google\.com\.hk https://www.google.com 302
+^https?:\/\/(www.)?(g|google)\.cn https://www.google.com 302
+^https:\/\/www\.google\.co\.jp https://www.google.com 302
+^https:\/\/www\.google\.com\.hk https://www.google.com 302
 
 #6月版
 ^https?:\/\/(www.)?(g|google)\.cn https://www.google.com 302
 ^https:\/\/www\.google\.co\.jp https://www.google.com 302
 # 非强制跳转
-# ^https:\/\/www\.google\.com\.hk\/.+ https://www.google.com/ncr 302
+^https:\/\/www\.google\.com\.hk\/.+ https://www.google.com/ncr 302
 # 强制跳转
 ^https:\/\/www\.google\.com\.hk\/ https://www.google.com/ncr 302
 
