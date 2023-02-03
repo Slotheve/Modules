@@ -10,4 +10,4 @@
 ^https?://(www.)?google.com.* https://www.google.com 302
 
 [MITM]
-hostname = *.google.com.hk ,*.g.cn,*.google.cn ,*.google.co.jp
+hostname = *.google.com.* ,*.g.cn,*.google.cn
