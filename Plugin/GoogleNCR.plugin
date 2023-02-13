@@ -4,9 +4,9 @@
 #!homepage=https://github.com/Slotheve/Loon-QX/
 #!icon=https://raw.githubusercontent.com/Slotheve/Loon-QX/main/Google.png
 [URL Rewrite]
-^https?://(www.)?(g|google).cn https://www.google.com 302
+^https?:\/\/(www.)?(g|google).\cn https://www.google.com 302
 ^https?:\/\/(ditu|maps).google\.cn https://maps.google.com 302
-^https?://(www.)?(g|google).com.hk https://www.google.com 302
+^https?:\/\/(www.)?(g|google).\com.\hk https://www.google.com 302
 ^https?:\/\/(ditu|maps).google\.com.hk https://maps.google.com 302
 
 [MITM]
