@@ -124,7 +124,7 @@ DOMAIN-SUFFIX,appleone.club,Apple
 DOMAIN-SUFFIX,appleone.community,Apple
 DOMAIN-SUFFIX,appleone.film,Apple
 DOMAIN-SUFFIX,appleone.guide,Apple
-DOMAIN-SUFFIX,appleone.DOMAIN,Apple
+DOMAIN-SUFFIX,appleone.host,Apple
 DOMAIN-SUFFIX,appleone.space,Apple
 DOMAIN-SUFFIX,appleone.tech,Apple
 DOMAIN-SUFFIX,appleone.website,Apple
@@ -290,7 +290,7 @@ DOMAIN-SUFFIX,imacsources.com,Apple
 DOMAIN-SUFFIX,indiaipad.com,Apple
 DOMAIN-SUFFIX,ipad.co.kr,Apple
 DOMAIN-SUFFIX,ipad.de,Apple
-DOMAIN-SUFFIX,ipad.DOMAIN,Apple
+DOMAIN-SUFFIX,ipad.host,Apple
 DOMAIN-SUFFIX,ipad.wang,Apple
 DOMAIN-SUFFIX,ipad3.com,Apple
 DOMAIN-SUFFIX,ipadair.cl,Apple
@@ -325,7 +325,7 @@ DOMAIN-SUFFIX,iphone.com,Apple
 DOMAIN-SUFFIX,iphone.com.au,Apple
 DOMAIN-SUFFIX,iphone.com.gr,Apple
 DOMAIN-SUFFIX,iphone.es,Apple
-DOMAIN-SUFFIX,iphone.DOMAIN,Apple
+DOMAIN-SUFFIX,iphone.host,Apple
 DOMAIN-SUFFIX,iphone.net.gr,Apple
 DOMAIN-SUFFIX,iphone.pt,Apple
 DOMAIN-SUFFIX,iphone.rs,Apple
