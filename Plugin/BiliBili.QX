@@ -11,18 +11,18 @@
 ^https?:\/\/api\.bilibili\.com\/pgc\/season\/app\/related\/recommend\? url reject-dict
 ^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/(Flash|ListFlash) url reject-dict
 
-^https?:\/\/api\.(bilibili|biliapi)\.(com|net)\/pgc\/page\/cinema\/tab\? url script-response-body BiliPure1.js
-^https:\/\/app\.bilibili\.com\/x\/v2\/splash\/list url script-response-body BiliPure1.js 
-^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/skin\? url script-response-body BiliPure1.js
-^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo\? url script-response-body BiliPure1.js
-^https://app.bilibili.com/x/v2/search/square url script-response-body BiliPure1.js
-^https?:\/\/app\.bilibili\.com\/x\/v2\/feed\/index url script-response-body BiliPure1.js
-^https?:\/\/api\.(bilibili|biliapi)\.(com|net)\/pgc\/page\/bangumi url script-response-body BiliPure1.js
-^https?:\/\/api\.live\.bilibili\.com\/xlive\/app-room\/v1\/index\/getInfoByRoom url script-response-body BiliPure1.js
-^https?:\/\/api\.vc\.bilibili\.com\/dynamic_svr\/v1\/dynamic_svr\/dynamic_(history|new)\? url script-response-body BiliPure1.js
-^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/tab url script-response-body BiliPure1.js
-^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/mine url script-response-body BiliPure1.js
-^https:\/\/app\.bilibili\.com\/bilibili\.app\.(view\.v1\.View\/View|dynamic\.v2\.Dynamic\/DynAll)$ url script-response-body BiliPure2.js
-^https://app\.bilibili\.com/bilibili\.app\.dynamic\.v2\.Dynamic/DynAll$ url script-response-body BiliPure3.js
+^https?:\/\/api\.(bilibili|biliapi)\.(com|net)\/pgc\/page\/cinema\/tab\? url script-response-body https://raw.githubusercontent.com/Slotheve/Loon-QX/main/JS/BiliPure1.js
+^https:\/\/app\.bilibili\.com\/x\/v2\/splash\/list url script-response-body https://raw.githubusercontent.com/Slotheve/Loon-QX/main/JS/BiliPure1.js 
+^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/skin\? url script-response-body https://raw.githubusercontent.com/Slotheve/Loon-QX/main/JS/BiliPure1.js
+^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo\? url script-response-body https://raw.githubusercontent.com/Slotheve/Loon-QX/main/JS/BiliPure1.js
+^https://app.bilibili.com/x/v2/search/square url script-response-body https://raw.githubusercontent.com/Slotheve/Loon-QX/main/JS/BiliPure1.js
+^https?:\/\/app\.bilibili\.com\/x\/v2\/feed\/index url script-response-body https://raw.githubusercontent.com/Slotheve/Loon-QX/main/JS/BiliPure1.js
+^https?:\/\/api\.(bilibili|biliapi)\.(com|net)\/pgc\/page\/bangumi url script-response-body https://raw.githubusercontent.com/Slotheve/Loon-QX/main/JS/BiliPure1.js
+^https?:\/\/api\.live\.bilibili\.com\/xlive\/app-room\/v1\/index\/getInfoByRoom url script-response-body https://raw.githubusercontent.com/Slotheve/Loon-QX/main/JS/BiliPure1.js
+^https?:\/\/api\.vc\.bilibili\.com\/dynamic_svr\/v1\/dynamic_svr\/dynamic_(history|new)\? url script-response-body https://raw.githubusercontent.com/Slotheve/Loon-QX/main/JS/BiliPure1.js
+^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/tab url script-response-body https://raw.githubusercontent.com/Slotheve/Loon-QX/main/JS/BiliPure1.js
+^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/mine url script-response-body https://raw.githubusercontent.com/Slotheve/Loon-QX/main/JS/BiliPure1.js
+^https:\/\/app\.bilibili\.com\/bilibili\.app\.(view\.v1\.View\/View|dynamic\.v2\.Dynamic\/DynAll)$ url script-response-body https://raw.githubusercontent.com/Slotheve/Loon-QX/main/JS/BiliPure2.js
+^https://app\.bilibili\.com/bilibili\.app\.dynamic\.v2\.Dynamic/DynAll$ url script-response-body https://raw.githubusercontent.com/Slotheve/Loon-QX/main/JS/BiliPure3.js
 
 hostname = +.bili*.*
