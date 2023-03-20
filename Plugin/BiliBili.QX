@@ -25,4 +25,4 @@
 ^https:\/\/app\.bilibili\.com\/bilibili\.app\.(view\.v1\.View\/View|dynamic\.v2\.Dynamic\/DynAll)$ url script-response-body https://raw.githubusercontent.com/Slotheve/JSes/main/BiliPure2.js
 ^https://app\.bilibili\.com/bilibili\.app\.dynamic\.v2\.Dynamic/DynAll$ url script-response-body https://raw.githubusercontent.com/Slotheve/JSes/main/BiliPure3.js
 
-hostname = +.bili*.*
+hostname = *.bili*.*,+.*.bili*.*
