@@ -88,35 +88,35 @@ http:
 
 script-providers:
   bilibili1:
-    url: https://raw.githubusercontent.com/Slotheve/JSes/main/BiliPure1.js
+    url: https://raw.githubusercontent.com/Slotheve/JSes/main/BiliPure3.js
     interval: 86400
   bilibili2:
-    url: https://raw.githubusercontent.com/Slotheve/JSes/main/BiliPure1.js
+    url: https://raw.githubusercontent.com/Slotheve/JSes/main/BiliPure3.js
     interval: 86400
   bilibili3:
-    url: https://raw.githubusercontent.com/Slotheve/JSes/main/BiliPure1.js
+    url: https://raw.githubusercontent.com/Slotheve/JSes/main/BiliPure3.js
     interval: 86400
   bilibili4:
-    url: https://raw.githubusercontent.com/Slotheve/JSes/main/BiliPure1.js
+    url: https://raw.githubusercontent.com/Slotheve/JSes/main/BiliPure3.js
     interval: 86400
   bilibili5:
-    url: https://raw.githubusercontent.com/Slotheve/JSes/main/BiliPure1.js
+    url: https://raw.githubusercontent.com/Slotheve/JSes/main/BiliPure3.js
     interval: 86400
   bilibili6:
-    url: https://raw.githubusercontent.com/Slotheve/JSes/main/BiliPure1.js
+    url: https://raw.githubusercontent.com/Slotheve/JSes/main/BiliPure3.js
     interval: 86400
   bilibili7:
-    url: https://raw.githubusercontent.com/Slotheve/JSes/main/BiliPure1.js
+    url: https://raw.githubusercontent.com/Slotheve/JSes/main/BiliPure3.js
     interval: 86400
   bilibili8:
-    url: https://raw.githubusercontent.com/Slotheve/JSes/main/BiliPure1.js
+    url: https://raw.githubusercontent.com/Slotheve/JSes/main/BiliPure3.js
     interval: 86400
   bilibili9:
     url: https://raw.githubusercontent.com/Slotheve/JSes/main/BiliPure2.js
     interval: 86400
   bilibili10:
-    url: https://raw.githubusercontent.com/Slotheve/JSes/main/BiliPure1.js
+    url: https://raw.githubusercontent.com/Slotheve/JSes/main/BiliPure3.js
     interval: 86400
   bilibili11:
-    url: https://raw.githubusercontent.com/Slotheve/JSes/main/BiliPure1.js
+    url: https://raw.githubusercontent.com/Slotheve/JSes/main/BiliPure3.js
     interval: 86400
