@@ -4,7 +4,7 @@ desc: 简体cc字幕、去广告、解锁高帧率
 http:
   rewrite:
     - ^https?:\/\/app\.bilibili\.com\/x\/resource\/ip - reject
-    -     - ^https?:\/\/app\.bilibili\.com\/bilibili\.app\.interface\.v1\.Search\/Default - reject
+    - ^https?:\/\/app\.bilibili\.com\/bilibili\.app\.interface\.v1\.Search\/Default - reject
     - ^https?:\/\/app\.bilibili\.com\/x\/resource\/top\/activity - reject-dict
     - ^https://app.bilibili.com/x/v2/splash/show - reject-dict
     - ^https://app.bilibili.com/x/v2/search/defaultwords - reject-dict
