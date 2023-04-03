@@ -76,7 +76,6 @@ http:
       timeout: 30
       require-body: true
       max-size: 3145728
-      binary-mode: true
     - match: ^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/mine
       name: bilibili11
       type: response
