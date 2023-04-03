@@ -10,7 +10,7 @@ http:
     - ^https://app.bilibili.com/x/v2/search/defaultwords - reject-dict
     - ^https?:\/\/api\.bilibili\.com\/x\/vip\/ads\/material\/report - reject-dict
     - ^https://api.bilibili.com/pgc/season/player/cards - reject-dict
-    - (^https?:\/\/app\.biliintl.com\/intl\/.+)(&sim_code=\d+)(.+) - 302 $1$3
+    - (^https?:\/\/app\.biliintl.com\/intl\/.+)(&sim_code=\d+)(.+) $1$3 302
     - ^https?:\/\/api\.vc\.bilibili\.com\/search_svr\/v\d\/Search\/recommend_words - reject
     - ^https?:\/\/api\.vc\.bilibili\.com\/topic_svr\/v1\/topic_svr - reject-dict
     - ^https?:\/\/api\.bilibili\.com\/pgc\/season\/app\/related\/recommend\? - reject-dict
