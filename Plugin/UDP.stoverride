@@ -1,0 +1,10 @@
+name: UDP策略
+desc: 防止UDP大量连接占用资源
+
+script:
+  shortcuts:
+    QUIC: network == 'udp' and (dst_port == 443 or dst_port == 4483 or dst_port == 486 or dst_port == 9305)
+    UDPS: network == 'udp'
+
+rules:
+  - SCRIPT,QUIC,REJECT
