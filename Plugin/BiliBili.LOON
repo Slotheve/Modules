@@ -16,7 +16,7 @@ URL-REGEX,^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.comic\/flash,REJE
 ^https?:\/\/api\.vc\.bilibili\.com\/dynamic_svr\/v1\/dynamic_svr\/mix_uplist - reject-dict
 ^https?:\/\/api\.bilibili\.com\/pgc\/season\/app\/related\/recommend\? - reject-dict
 ^https?:\/\/api\.bilibili\.com\/x\/vip\/ads\/material\/report - reject-dict
-^https://api.bilibili.com/pgc/season/player/cards - reject-dict
+^https?:\/\/api\.bilibili\.com\/pgc\/season\/player\/cards - reject-dict
 
 [Script]
 # BiliBili去广告
