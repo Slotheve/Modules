@@ -24,4 +24,4 @@
 ^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/mine url script-response-body https://raw.githubusercontent.com/Slotheve/JSes/main/BiliPure1.js
 ^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.(view\.v1\.View\/View|dynamic\.v2\.Dynamic\/DynAll|playurl\.v1\.PlayURL\/PlayView)$ url script-response-body https://raw.githubusercontent.com/Slotheve/JSes/main/BiliPure2.js
 
-hostname = +.bili*.*
+hostname = +.bili*.*, *.bili*.*
