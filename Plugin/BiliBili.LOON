@@ -23,12 +23,11 @@ URL-REGEX,^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.comic\/flash,REJE
 http-response ^https?:\/\/app\.bilibili\.com\/x\/v2\/feed\/index requires-body=1,script-path=https://raw.githubusercontent.com/Slotheve/JSes/main/BiliPure1.js,tag=AD1
 http-response ^https?:\/\/api\.live\.bilibili\.com\/xlive\/app-room\/v1\/index\/getInfoByRoom requires-body=1,script-path=https://raw.githubusercontent.com/Slotheve/JSes/main/BiliPure1.js,tag=AD2
 http-response ^https?:\/\/api\.vc\.bilibili\.com\/dynamic_svr\/v1\/dynamic_svr\/dynamic_(history|new)\? requires-body=1,script-path=https://raw.githubusercontent.com/Slotheve/JSes/main/BiliPure1.js,tag=AD3
-http-response ^https?:\/\/app\.bilibili\.com\/x\/v2\/splash\/list requires-body=1,script-path=https://raw.githubusercontent.com/Slotheve/JSes/main/BiliPure1.js,tag=AD4
-http-response ^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/tab requires-body=1,script-path=https://raw.githubusercontent.com/Slotheve/JSes/main/BiliPure1.js,tag=AD5
-http-response ^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/mine requires-body=1,script-path=https://raw.githubusercontent.com/Slotheve/JSes/main/BiliPure1.js,tag=AD6
-http-response ^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.(view\.v1\.View\/View|dynamic\.v2\.Dynamic\/DynAll|playurl\.v1\.PlayURL\/PlayView)$ requires-body=1,binary-body-mode=true,script-path=https://raw.githubusercontent.com/Slotheve/JSes/main/BiliPure2.js,tag=AD7
-http-response ^https?:\/\/api\.(bilibili|biliapi)\.(com|net)\/pgc\/page\/cinema\/tab\? requires-body=1,script-path=https://raw.githubusercontent.com/Slotheve/JSes/main/BiliPure3.js,tag=AD8
-http-response ^https?:\/\/api\.(bilibili|biliapi)\.(com|net)\/pgc\/page\/bangumi requires-body=1,script-path=https://raw.githubusercontent.com/Slotheve/JSes/main/BiliPure1.js,tag=AD9
+http-response ^https:\/\/app\.bilibili\.com\/x\/(v2\/(splash\/(list|show)|feed\/index\?)|resource\/show\/tab\/v2) requires-body=1,script-path=https://raw.githubusercontent.com/Slotheve/JSes/main/BiliPure4.js,tag=AD4
+http-response ^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/mine requires-body=1,script-path=https://raw.githubusercontent.com/Slotheve/JSes/main/BiliPure1.js,tag=AD5
+http-response ^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.(view\.v1\.View\/View|dynamic\.v2\.Dynamic\/DynAll|playurl\.v1\.PlayURL\/PlayView)$ requires-body=1,binary-body-mode=true,script-path=https://raw.githubusercontent.com/Slotheve/JSes/main/BiliPure2.js,tag=AD6
+http-response ^https?:\/\/api\.(bilibili|biliapi)\.(com|net)\/pgc\/page\/cinema\/tab\? requires-body=1,script-path=https://raw.githubusercontent.com/Slotheve/JSes/main/BiliPure3.js,tag=AD7
+http-response ^https?:\/\/api\.(bilibili|biliapi)\.(com|net)\/pgc\/page\/bangumi requires-body=1,script-path=https://raw.githubusercontent.com/Slotheve/JSes/main/BiliPure1.js,tag=AD8
 
 # VIP
 http-response https:\/\/ap(p|i)\.bilibili\.com\/((pgc\/player\/api\/playurl)|(x\/v2\/account\/myinfo\?)|(x\/v2\/account/mine\?)) requires-body=1, script-path=https://raw.githubusercontent.com/Slotheve/JSes/master/BiliCrack.js, tag=Crack
