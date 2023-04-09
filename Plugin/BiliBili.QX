@@ -22,4 +22,4 @@
 ^https?:\/\/ap(p|i)\.bilibili\.com\/((pgc\/player\/api\/playurl)|(x\/v2\/account\/myinfo\?)|(x\/v2\/account/mine\?)) url script-response-body https://raw.githubusercontent.com/Slotheve/JSes/master/BiliCrack1.js
 ^https?:\/\/ap(i|p)\.bilibili\.com\/bilibili\.\w{3,4}\..+\/(View|PlayView|PlayConf|PlayerOnline|MainList|ViewProgress)$ url script-response-body https://raw.githubusercontent.com/Slotheve/JSes/master/BiliCrack2.js
 
-hostname = *.bili*.*, 124.239.240.*, 101.89.57.66, 218.94.210.66
+hostname = *.bili*.*, *.hdslb.com, 124.239.240.*, 101.89.57.66, 218.94.210.66
