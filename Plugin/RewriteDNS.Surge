@@ -1,5 +1,0 @@
-#!name=RewriteDNS
-#!desc=在连接WiFi(SSID列表)时,由SwitchDNS关闭;当连接数据时,由SwitchDNS开启
-
-[General]
-dns-server = 119.29.29.29, 114.114.114.114
