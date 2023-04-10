@@ -1,5 +1,5 @@
-name: 哔哩哔哩Pure
-desc: 简体cc字幕、去广告、解锁高帧率
+name: 哔哩哔哩 Pure & Crack
+desc: 哔哩哔哩去广告、解锁1080P+ & 1080P 60fps & 4K
 #author:Slotheve
 http:
   rewrite:
@@ -16,107 +16,89 @@ http:
     - ^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/(Flash|ListFlash) - reject-dict
 
   script:
-    - match: ^https?:\/\/api\.(bilibili|biliapi)\.(com|net)\/pgc\/page\/cinema\/tab\?
-      name: bilibili1
+    - match: ^https?:\/\/api\.vc\.bilibili\.com\/dynamic_svr\/v1\/dynamic_svr\/dynamic_(history|new)\?
+      name: Pure1
       type: response
       timeout: 30
       require-body: true
       max-size: 3145728
-    - match: ^https:\/\/app\.bilibili\.com\/x\/v2\/splash\/list
-      name: bilibili2
-      type: response
-      timeout: 30
-      require-body: true
-      max-size: 3145728
-    - match: ^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/skin\?
-      name: bilibili3
-      type: response
-      timeout: 30
-      require-body: true
-      max-size: 3145728
-    - match: ^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo\?
-      name: bilibili4
-      type: response
-      timeout: 30
-      require-body: true
-      max-size: 3145728
-    - match: ^https://app.bilibili.com/x/v2/search/square
-      name: bilibili5
-      type: response
-      timeout: 30
-      require-body: true
-      max-size: 3145728
-    - match: ^https?:\/\/app\.bilibili\.com\/x\/v2\/feed\/index
-      name: bilibili6
+    - match: ^https?:\/\/app\.bilibili\.com\/x\/v2\/splash\/list
+      name: Pure1
       type: response
       timeout: 30
       require-body: true
       max-size: 3145728
     - match: ^https?:\/\/api\.(bilibili|biliapi)\.(com|net)\/pgc\/page\/bangumi
-      name: bilibili7
+      name: Pure1
+      type: response
+      timeout: 30
+      require-body: true
+      max-size: 3145728
+    - match: ^https?:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.(view\.v1\.View\/View|dynamic\.v2\.Dynamic\/DynAll|playurl\.v1\.PlayURL\/PlayView)$
+      name: Pure2
+      type: response
+      timeout: 30
+      require-body: true
+      max-size: 3145728
+    - match: ^https?:\/\/app\.bilibili\.com\/x\/v2\/feed\/index
+      name: Pure3
       type: response
       timeout: 30
       require-body: true
       max-size: 3145728
     - match: ^https?:\/\/api\.live\.bilibili\.com\/xlive\/app-room\/v1\/index\/getInfoByRoom
-      name: bilibili8
-      type: response
-      timeout: 30
-      require-body: true
-      max-size: 3145728
-    - match: ^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.(view\.v1\.View\/View|dynamic\.v2\.Dynamic\/DynAll|playurl\.v1\.PlayURL\/PlayView)$
-      name: bilibili9
-      type: response
-      timeout: 30
-      require-body: true
-      max-size: 3145728
-    - match: ^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/tab
-      name: bilibili10
+      name: Pure3
       type: response
       timeout: 30
       require-body: true
       max-size: 3145728
     - match: ^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/mine
-      name: bilibili11
+      name: Pure3
+      type: response
+      timeout: 30
+      require-body: true
+      max-size: 3145728
+    - match: ^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/tab
+      name: Pure3
+      type: response
+      timeout: 30
+      require-body: true
+      max-size: 3145728
+    - match: ^https?:\/\/api\.(bilibili|biliapi)\.(com|net)\/pgc\/page\/cinema\/tab\?
+      name: Pure3
+      type: response
+      timeout: 30
+      require-body: true
+      max-size: 3145728
+    - match: ^https?:\/\/ap(p|i)\.bilibili\.com\/((pgc\/player\/api\/playurl)|(x\/v2\/account\/myinfo\?)|(x\/v2\/account/mine\?))
+      name: Crack1
       type: response
       timeout: 30
       require-body: true
       max-size: 3145728
 
   mitm:
-    - '*.bili*.*:*'
+    - 'app.bilibili.com'
+    - 'api.live.bilibili.com'
+    - 'api.vc.bilibili.com'
+    - 'api.bilibili.com'
+    - 'manga.bilibili.com'
+    - 'grpc.biliapi.net'
+    - 'api.biliapi.net'
+    - '-broadcast.chat.bilibili.com'
+    - '-*cdn*.biliapi.net'
+    - '-*tracker*.biliapi.net'
 
 script-providers:
-  bilibili1:
-    url: https://raw.githubusercontent.com/Slotheve/JSes/main/BiliPure3.js
+  Pure1:
+    url: https://raw.githubusercontent.com/Slotheve/JSes/main/BiliPure1.js
     interval: 86400
-  bilibili2:
-    url: https://raw.githubusercontent.com/Slotheve/JSes/main/BiliPure3.js
-    interval: 86400
-  bilibili3:
-    url: https://raw.githubusercontent.com/Slotheve/JSes/main/BiliPure3.js
-    interval: 86400
-  bilibili4:
-    url: https://raw.githubusercontent.com/Slotheve/JSes/main/BiliPure3.js
-    interval: 86400
-  bilibili5:
-    url: https://raw.githubusercontent.com/Slotheve/JSes/main/BiliPure3.js
-    interval: 86400
-  bilibili6:
-    url: https://raw.githubusercontent.com/Slotheve/JSes/main/BiliPure3.js
-    interval: 86400
-  bilibili7:
-    url: https://raw.githubusercontent.com/Slotheve/JSes/main/BiliPure3.js
-    interval: 86400
-  bilibili8:
-    url: https://raw.githubusercontent.com/Slotheve/JSes/main/BiliPure3.js
-    interval: 86400
-  bilibili9:
+  Pure2:
     url: https://raw.githubusercontent.com/Slotheve/JSes/main/BiliPure2.js
     interval: 86400
-  bilibili10:
+  Purei3:
     url: https://raw.githubusercontent.com/Slotheve/JSes/main/BiliPure3.js
     interval: 86400
-  bilibili11:
-    url: https://raw.githubusercontent.com/Slotheve/JSes/main/BiliPure3.js
+  Crack1:
+    url: https://raw.githubusercontent.com/Slotheve/JSes/main/BiliCrack1.js
     interval: 86400
