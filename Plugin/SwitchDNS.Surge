@@ -4,3 +4,6 @@
 
 [Script]
 WiFi = type=dns,script-path=https://raw.githubusercontent.com/Slotheve/JSes/master/SwitchDNS.js
+
+[Host]
+* = script:WiFi
