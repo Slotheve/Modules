@@ -29,4 +29,4 @@ URL-REGEX,^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.comic\/flash,REJE
 9=type=http-response,pattern=^https?:\/\/ap(p|i)\.bilibili\.com\/((pgc\/player\/api\/playurl)|(x\/v2\/account\/myinfo\?)|(x\/v2\/account/mine\?)),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Slotheve/JSes/main/BiliCrack1.js
 
 [MITM]
-hostname = +.bili*.*, *.hdslb.com, 124.239.240.*, 101.89.57.66, 218.94.210.66
+hostname = .*.bili*.*, *.bili*.*, *.hdslb.com, 124.239.240.*, 101.89.57.66, 218.94.210.66
