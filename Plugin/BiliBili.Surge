@@ -8,13 +8,17 @@ URL-REGEX,^https?:\/\/api\.bilibili\.com\/x\/v2\/dm\/ad,REJECT
 URL-REGEX,^https?:\/\/api\.bilibili\.com\/pgc\/season\/app\/related\/recommend\?,REJECT
 
 [URL Rewrite]
-(^https?:\/\/app\.biliintl.com\/intl\/.+)(&sim_code=\d+)(.+) $1$3 302
+^https?:\/\/app\.bilibili\.com\/x\/resource\/ip - REJECT
+^https?:\/\/app\.bilibili\.com\/bilibili\.app\.interface\.v1\.Search\/Default - REJECT
+^https?:\/\/app\.bilibili\.com\/x\/resource\/top\/activity - REJECT
+^https?://app.bilibili.com/x/v2/splash/show - REJECT
+^https?://app.bilibili.com/x/v2/search/defaultwords - REJECT
+^https?:\/\/api\.bilibili\.com\/x\/vip\/ads\/material\/report - REJECT
+^https?://api.bilibili.com/pgc/season/player/cards - REJECT
 ^https?:\/\/api\.vc\.bilibili\.com\/search_svr\/v\d\/Search\/recommend_words - REJECT
 ^https?:\/\/api\.vc\.bilibili\.com\/topic_svr\/v1\/topic_svr - REJECT
-^https?:\/\/api\.vc\.bilibili\.com\/dynamic_svr\/v1\/dynamic_svr\/mix_uplist - REJECT
 ^https?:\/\/api\.bilibili\.com\/pgc\/season\/app\/related\/recommend\? - REJECT
-^https?:\/\/api\.bilibili\.com\/x\/vip\/ads\/material\/report - REJECT
-^https?:\/\/api\.bilibili\.com\/pgc\/season\/player\/cards - REJECT
+^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/(Flash|ListFlash) - REJECT
 
 [Script]
 1=type=http-response,pattern=^https?:\/\/app\.bilibili\.com\/x\/v2\/feed\/index,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Slotheve/JSes/main/BiliPure3.js
