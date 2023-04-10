@@ -6,7 +6,6 @@
 DOMAIN,cm.bilibili.com,REJECT
 URL-REGEX,^https?:\/\/api\.bilibili\.com\/x\/v2\/dm\/ad,REJECT
 URL-REGEX,^https?:\/\/api\.bilibili\.com\/pgc\/season\/app\/related\/recommend\?,REJECT
-URL-REGEX,^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.comic\/flash,REJECT
 
 [URL Rewrite]
 (^https?:\/\/app\.biliintl.com\/intl\/.+)(&sim_code=\d+)(.+) $1$3 302
@@ -30,4 +29,4 @@ URL-REGEX,^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.comic\/flash,REJE
 10=type=http-response,pattern=^https?:\/\/ap(p|i)\.bilibili\.com\/((pgc\/player\/api\/playurl)|(x\/v2\/account\/myinfo\?)|(x\/v2\/account/mine\?)),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Slotheve/JSes/main/BiliCrack1.js
 
 [MITM]
-hostname = *.hdslb.com,app.bilibili.com,api.live.bilibili.com,api.vc.bilibili.com,api.bilibili.com,manga.bilibili.com,grpc.biliapi.net,api.biliapi.net,-broadcast.chat.bilibili.com,-*cdn*.biliapi.net,-*tracker*.biliapi.net,upos-hz-mirrorakam.akamaized.net
+hostname = *.hdslb.com,*.bili*.*,*.*.bili*.*
