@@ -1,5 +1,5 @@
 #!name=SwitchDNS
-#!desc=连接SSID列表的WiFi时,自动切换DNS为system,并更改出站为Direct;断开WiFi恢复
+#!desc=连接SSID列表的WiFi时,自动切换DNS为system;断开WiFi恢复
 #!system=ios
 
 [Script]
