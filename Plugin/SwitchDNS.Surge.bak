@@ -1,0 +1,6 @@
+#!name=SwitchDNS
+#!desc=连接SSID列表的WiFi时,自动切换DNS为system,并更改出站为Direct;断开WiFi恢复
+#!system=ios
+
+[Script]
+WiFi = type=event,event-name=network-changed,timeout=600,script-path=https://raw.githubusercontent.com/Slotheve/JSes/master/WiFi.js
