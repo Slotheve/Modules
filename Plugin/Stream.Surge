@@ -1,4 +1,4 @@
-#!name=CheckStream
+#!name=Stream
 #!desc=流媒体解锁检测信息面板
 
 [Panel]
