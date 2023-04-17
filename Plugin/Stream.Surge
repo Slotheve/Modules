@@ -1,0 +1,8 @@
+#!name=CheckStream
+#!desc=流媒体解锁检测信息面板
+
+[Panel]
+Stream-All-Lite = script-name=Stream-All-Lite,update-interval=7200
+
+[Script]
+Stream-All-Lite = type=generic,timeout=30,script-path= https://raw.githubusercontent.com/Slotheve/JSes/master/Stream.js,script-update-interval=0,argument=title=流媒体解锁检测&icon=play.tv.fill&color=#D22F28
