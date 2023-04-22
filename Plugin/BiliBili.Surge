@@ -8,31 +8,30 @@ URL-REGEX,^https?:\/\/api\.bilibili\.com\/x\/v2\/dm\/ad,REJECT
 URL-REGEX,^https?:\/\/api\.bilibili\.com\/pgc\/season\/app\/related\/recommend\?,REJECT
 
 [URL Rewrite]
-^https?:\/\/app\.bilibili\.com\/x\/resource\/ip - REJECT
-^https?:\/\/app\.bilibili\.com\/bilibili\.app\.interface\.v1\.Search\/Default - REJECT
-^https?:\/\/app\.bilibili\.com\/x\/resource\/top\/activity - REJECT
-^https?://app.bilibili.com/x/v2/splash/show - REJECT
-^https?://app.bilibili.com/x/v2/search/defaultwords - REJECT
-^https?:\/\/api\.bilibili\.com\/x\/vip\/ads\/material\/report - REJECT
-^https?://api.bilibili.com/pgc/season/player/cards - REJECT
-^https?:\/\/api\.vc\.bilibili\.com\/search_svr\/v\d\/Search\/recommend_words - REJECT
-^https?:\/\/api\.vc\.bilibili\.com\/topic_svr\/v1\/topic_svr - REJECT
-^https?:\/\/api\.bilibili\.com\/pgc\/season\/app\/related\/recommend\? - REJECT
-^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/(Flash|ListFlash) - REJECT
+^https?:\/\/app\.bilibili\.com\/x\/resource\/ip - reject
+^https?:\/\/app\.bilibili\.com\/bilibili\.app\.interface\.v1\.Search\/Default - reject
+^https?:\/\/app\.bilibili\.com\/x\/resource\/top\/activity - reject
+^https?://app.bilibili.com/x/v2/splash/show - reject
+^https?://app.bilibili.com/x/v2/search/defaultwords - reject
+^https?:\/\/api\.bilibili\.com\/x\/vip\/ads\/material\/report - reject
+^https?://api.bilibili.com/pgc/season/player/cards - reject
+^https?:\/\/api\.vc\.bilibili\.com\/search_svr\/v\d\/Search\/recommend_words - reject
+^https?:\/\/api\.vc\.bilibili\.com\/topic_svr\/v1\/topic_svr - reject
+^https?:\/\/api\.bilibili\.com\/pgc\/season\/app\/related\/recommend\? - reject
+^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/(Flash|ListFlash) - reject
 
 [Script]
-Pure1=type=http-response,pattern=^https?:\/\/app\.bilibili\.com\/x\/v2\/feed\/index,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Slotheve/JSes/main/BiliPure3.js
-Pure2=type=http-response,pattern=^https?:\/\/api\.live\.bilibili\.com\/xlive\/app-room\/v1\/index\/getInfoByRoom,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Slotheve/JSes/main/BiliPure3.js
-Pure3=type=http-response,pattern=^https?:\/\/api\.vc\.bilibili\.com\/dynamic_svr\/v1\/dynamic_svr\/dynamic_(history|new)\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Slotheve/JSes/main/BiliPure1.js
+Pure1=type=http-response,pattern=^https?:\/\/api\.vc\.bilibili\.com\/dynamic_svr\/v1\/dynamic_svr\/dynamic_(history|new)\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Slotheve/JSes/main/BiliPure1.js
+Pure2=type=http-response,pattern=^https?:\/\/app\.bilibili\.com\/x\/v2\/feed\/index,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Slotheve/JSes/main/BiliPure3.js
+Pure3=type=http-response,pattern=^https?:\/\/api\.live\.bilibili\.com\/xlive\/app-room\/v1\/index\/getInfoByRoom,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Slotheve/JSes/main/BiliPure3.js
 Pure4=type=http-response,pattern=^https?:\/\/api\.(bilibili|biliapi)\.(com|net)\/pgc\/page\/cinema\/tab\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Slotheve/JSes/main/BiliPure3.js
 Pure5=type=http-response,pattern=^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/mine,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Slotheve/JSes/main/BiliPure3.js
 Pure6=type=http-response,pattern=^https?:\/\/api\.(bilibili|biliapi)\.(com|net)\/pgc\/page\/bangumi,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Slotheve/JSes/main/BiliPure3.js
 Pure7=type=http-response,pattern=^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/tab,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Slotheve/JSes/main/BiliPure3.js
-Pure8=type=http-response,pattern=^https?:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.(view\.v1\.View\/View|dynamic\.v2\.Dynamic\/DynAll|playurl\.v1\.PlayURL\/PlayView)$,requires-body=1,binary-body-mode=1,max-size=0,script-path=https://raw.githubusercontent.com/Slotheve/JSes/main/BiliPure2.js
-Pure9=type=http-response,pattern=^https?:\/\/app\.bilibili\.com\/x\/v2\/splash\/list,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Slotheve/JSes/main/BiliPure3.js
-Pure10=type=http-response,pattern=^https?:\/\/app\.bilibili\.com\/x\/resource\/top\/activity,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Slotheve/JSes/main/BiliPure3.js
-Pure11=type=http-response,pattern=^https?:\/\/app\.bilibili\.com\/x\/v2\/search\/square,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Slotheve/JSes/main/BiliPure3.js
+Pure8=type=http-response,pattern=^https?:\/\/app\.bilibili\.com\/x\/v2\/splash\/list,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Slotheve/JSes/main/BiliPure3.js
+Pure9=type=http-response,pattern=^https?:\/\/app\.bilibili\.com\/x\/resource\/top\/activity,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Slotheve/JSes/main/BiliPure3.js
+Pure10=type=http-response,pattern=^https?:\/\/app\.bilibili\.com\/x\/v2\/search\/square,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Slotheve/JSes/main/BiliPure3.js
 Crack1=type=http-response,pattern=^https?:\/\/ap(p|i)\.bilibili\.com\/((pgc\/player\/api\/playurl)|(x\/v2\/account\/myinfo\?)|(x\/v2\/account/mine\?)),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Slotheve/JSes/main/BiliCrack1.js
 
 [MITM]
-hostname = %APPEND% app.bilibili.com,api.live.bilibili.com,api.vc.bilibili.com, api.bilibili.com, manga.bilibili.com, grpc.biliapi.net,api.biliapi.net, -broadcast.chat.bilibili.com, -*cdn*.biliapi.net, -*tracker*.biliapi.net
+hostname = %APPEND% app.bilibili.com,api.live.bilibili.com,api.vc.bilibili.com, api.bilibili.com, manga.bilibili.com, grpc.biliapi.net,api.biliapi.net, -broadcast.chat.bilibili.com, -*cdn*.biliapi.net
