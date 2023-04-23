@@ -39,4 +39,4 @@ Pure9=type=http-response,pattern=^https?:\/\/app\.bilibili\.com\/x\/v2\/search\/
 Crack1=type=http-response,pattern=^https?:\/\/ap(p|i)\.bilibili\.com\/((pgc\/player\/api\/playurl)|(x\/v2\/account\/myinfo\?)|(x\/v2\/account/mine\?)),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Slotheve/JSes/main/BiliCrack1.js
 
 [MITM]
-hostname = *.bili*.*:0, *.*.bili*.*:0, -broadcast.chat.bilibili.com, -*cdn*.biliapi.net
+hostname = %APPEND% *.hdslb.com:0, *.bili*.*:0, *.*.bili*.*:0, upos-hz-mirrorakam.akamaized.net:0, -broadcast.chat.bilibili.com, -*cdn*.biliapi.net
