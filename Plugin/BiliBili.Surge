@@ -2,6 +2,9 @@
 #!desc=BiliBili Pure & Crack
 #!system=ios
 
+[General]
+always-real-ip = data.bilibili.com
+
 [Rule]
 AND,((OR,((DEST-PORT,9305), (DEST-PORT,4483), (DEST-PORT,3478), (DEST-PORT,486))), (PROTOCOL,UDP)), REJECT
 DOMAIN,cm.bilibili.com,REJECT
