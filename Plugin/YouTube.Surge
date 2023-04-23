@@ -1,0 +1,9 @@
+#!name=YouTube去广告
+#!desc= YouTube去广告模块
+#!system=ios
+
+[Script]
+youtube = type=http-request,pattern=^https?:\/\/.+?\.googlevideo\.com\/.+&(oad|ctier)=(?!A),script-path=https://raw.githubusercontent.com/Slotheve/JSes/master/YouTube.js
+
+[MITM]
+hostname = %APPEND% .+?.googlevideo.com
