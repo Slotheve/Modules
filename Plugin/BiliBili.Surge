@@ -3,7 +3,7 @@
 #!system=ios
 
 [General]
-always-real-ip = data.bilibili.com, *.bilivideo.com
+always-real-ip = data.bilibili.*, *.bilivideo.*
 
 [Rule]
 AND,((OR,((DEST-PORT,9305), (DEST-PORT,9102), (DEST-PORT,4483), (DEST-PORT,4480), (DEST-PORT,3478), (DEST-PORT,486))), (PROTOCOL,UDP)), REJECT
