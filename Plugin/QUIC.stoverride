@@ -3,7 +3,7 @@ desc: 防止UDP大量连接占用资源
 
 script:
   shortcuts:
-    QUIC: network == 'udp' and (dst_port == 443 or dst_port == 4483 or dst_port == 486 or dst_port == 9305)
+    QUIC: network == 'udp' and (dst_port == 443 or dst_port == 4483 or dst_port == 9305)
 
 rules:
-  - SCRIPT,QUIC,REJECT
+  - SCRIPT,QUIC,REJECT,no-track
