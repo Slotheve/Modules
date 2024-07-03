@@ -11,7 +11,7 @@ URL-REGEX,^https?:\/\/api\.bilibili\.com\/pgc\/season\/app\/related\/recommend\?
 URL-REGEX,^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.comic\/flash,REJECT-DROP
 
 [Rewrite]
-^https?:\/\/((?!cn-jsnt-ct-01).*)(-*-|mcdn)((?!cn-jsnt-ct-01).*)\.bilivideo\.(cn|com) header https://cn-jsnt-ct-01-05.bilivideo.com
+^https?:\/\/((?!mirrorali).*)(-*-|mcdn)((?!mirrorali).*)\.bilivideo\.(cn|com) header https://upos-sz-mirrorali.bilivideo.com
 ^https?:\/\/*\.mcdn\.bilivideo\.com reject-dict
 ^https?:\/\/dataflow\.biliapi\.com reject-dict
 ^https?:\/\/api\.bilibili\.com\/pgc\/season\/player\/cards reject-dict
