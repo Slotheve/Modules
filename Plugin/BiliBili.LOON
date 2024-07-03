@@ -1,5 +1,5 @@
-#!name= BiliBili Patch
-#!desc= 哔哩哔哩1080P+
+#!name= BiliBili Pure
+#!desc= 哔哩哔哩去广告+重定向
 #!author=Slotheve
 #!homepage=https://github.com/Slotheve/Module/
 #!icon=https://raw.githubusercontent.com/Slotheve/Modules/main/bilibili.png
@@ -11,15 +11,16 @@ URL-REGEX,^https?:\/\/api\.bilibili\.com\/pgc\/season\/app\/related\/recommend\?
 URL-REGEX,^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.comic\/flash,REJECT
 
 [URL Rewrite]
-^https?:\/\/api\.vc\.bilibili\.com\/search_svr\/v\d\/Search\/recommend_words - reject-dict
-^https?:\/\/api\.vc\.bilibili\.com\/topic_svr\/v1\/topic_svr - reject-dict
-^https?:\/\/api\.vc\.bilibili\.com\/dynamic_svr\/v1\/dynamic_svr\/mix_uplist - reject-dict
-^https?:\/\/api\.bilibili\.com\/pgc\/season\/app\/related\/recommend\? - reject-dict
-^https?:\/\/api\.bilibili\.com\/x\/vip\/ads\/material\/report - reject-dict
-^https?:\/\/api\.bilibili\.com\/pgc\/season\/player\/cards - reject-dict
-
-[Script]
-http-response ^https?:\/\/ap(p|i)\.bilibili\.com\/((pgc\/player\/api\/playurl)|(x\/v2\/account\/myinfo\?)|(x\/v2\/account/mine\?)) requires-body=1,timeout=10,script-path=https://raw.githubusercontent.com/Slotheve/JSes/master/BiliCrack1.js, tag=Crack
+^https?:\/\/((?!mirrorali).*)(-*-|mcdn)((?!mirrorali).*)\.bilivideo\.cn header https://upos-sz-mirrorali.bilivideo.com
+^https?:\/\/((?!mirrorali).*)(-*-|mcdn)((?!mirrorali).*)\.bilivideo\.com header https://upos-sz-mirrorali.bilivideo.com
+^https?:\/\/dataflow\.biliapi\.com reject
+^https?:\/\/api\.bilibili\.com\/pgc\/season\/player\/cards reject
+^https?:\/\/api\.bilibili\.com\/x\/vip\/ads\/material\/report reject
+^https?:\/\/app\.bilibili\.com\/x\/v2\/search\/defaultwords reject
+^https?:\/\/app\.bilibili\.com\/x\/v2\/splash\/show reject
+^https?:\/\/app\.bilibili\.com\/x\/resource\/top\/activity reject
+^https?:\/\/app\.bilibili\.com\/bilibili\.app\.interface\.v1\.Search\/Default reject
+^https?:\/\/app\.bilibili\.com\/x\/resource\/ip reject
 
 [MITM]
-hostname = *.hdslb.com, *.bili*.*, *.*.bili*.*
+hostname = app.bilibili.com, api.bilibili.com, *.bilivideo.*, *.biliapi.com
