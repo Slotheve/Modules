@@ -10,7 +10,7 @@ URL-REGEX,^https?:\/\/api\.bilibili\.com\/pgc\/season\/app\/related\/recommend\?
 URL-REGEX,^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.comic\/flash,REJECT-DROP
 
 [URL Rewrite]
-^https?:\/\/((?!mirrorali).*)(-*-|mcdn)((?!mirrorali).*)\.bilivideo\.(cn|com) header https://upos-sz-mirrorali.bilivideo.com
+^https?:\/\/((?!mirrorali).*)(-*-|mcdn)((?!mirrorali).*)\.bilivideo\.(cn|com) https://upos-sz-mirrorali.bilivideo.com header
 ^https?:\/\/*\.mcdn\.bilivideo\.com - reject
 ^https?:\/\/dataflow\.biliapi\.com - reject
 ^https?:\/\/api\.bilibili\.com\/pgc\/season\/player\/cards - reject
