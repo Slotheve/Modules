@@ -12,6 +12,7 @@ URL-REGEX,^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.comic\/flash,REJE
 [URL Rewrite]
 ^https?:\/\/dataflow\.biliapi\.com - reject
 ^https?:\/\/api\.bilibili\.com\/pgc\/season\/player\/cards - reject
+^https:\/\/(api\.bilibili\.com\/x\/mengqi\/v1\/resource|app\.bilibili\.com\/x\/resource\/peak\/download)\? - reject
 ^https?:\/\/api\.bilibili\.com\/x\/vip\/ads\/material\/report - reject
 ^https?:\/\/app\.bilibili\.com\/x\/v2\/search\/defaultwords - reject
 ^https?:\/\/app\.bilibili\.com\/x\/v2\/splash\/show - reject
