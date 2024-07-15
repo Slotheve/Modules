@@ -19,7 +19,7 @@ URL-REGEX,^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.comic\/flash,REJE
 ^https?:\/\/app\.bilibili\.com\/x\/resource\/top\/activity - reject
 ^https?:\/\/app\.bilibili\.com\/bilibili\.app\.interface\.v1\.Search\/Default - reject
 ^https?:\/\/app\.bilibili\.com\/x\/resource\/ip - reject
-^https?:\/\/((?!cn-jsnt-ct-01).*)(-*-|mcdn)((?!cn-jsnt-ct-01).*)\.bilivideo\.(cn|com) https://cn-jsnt-ct-01-02.bilivideo.com header
+^https?:\/\/((?!cn-jssz-cm-01).*)(-*-|mcdn)((?!cn-jssz-cm-01).*)\.bilivideo\.(cn|com) https://cn-jssz-cm-01-02.bilivideo.com header
 ^https?:\/\/*\.mcdn\.bilivideo\.com - reject
 
 [MITM]
