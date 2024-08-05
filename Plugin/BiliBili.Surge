@@ -10,7 +10,9 @@ URL-REGEX,^https?:\/\/api\.bilibili\.com\/pgc\/season\/app\/related\/recommend\?
 URL-REGEX,^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.comic\/flash,REJECT-DROP
 
 [URL Rewrite]
-#^https?:\/\/dataflow\.biliapi\.com - reject
+^https?:\/\/dataflow\.biliapi\.com - reject
+^https?:\/\/((?!cn-jsnt-ct-01).*)(-*-|mcdn)((?!cn-jsnt-ct-01).*)\.bilivideo\.(cn|com)\/upgcxcode https://cn-jsnt-ct-01-01.bilivideo.com/upgcxcode 302
+^https?:\/\/*\.mcdn\.bilivideo\.com - reject
 ^https?:\/\/api\.bilibili\.com\/pgc\/season\/player\/cards - reject
 ^https:\/\/(api\.bilibili\.com\/x\/mengqi\/v1\/resource|app\.bilibili\.com\/x\/resource\/peak\/download)\? - reject
 ^https?:\/\/api\.bilibili\.com\/x\/vip\/ads\/material\/report - reject
@@ -19,8 +21,6 @@ URL-REGEX,^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.comic\/flash,REJE
 ^https?:\/\/app\.bilibili\.com\/x\/resource\/top\/activity - reject
 ^https?:\/\/app\.bilibili\.com\/bilibili\.app\.interface\.v1\.Search\/Default - reject
 ^https?:\/\/app\.bilibili\.com\/x\/resource\/ip - reject
-^https?:\/\/((?!cn-jsnt-ct-01).*)(-*-|mcdn)((?!cn-jsnt-ct-01).*)\.bilivideo\.(cn|com)\/upgcxcode https://cn-jsnt-ct-01-01.bilivideo.com/upgcxcode 302
-^https?:\/\/*\.mcdn\.bilivideo\.com - reject
 
 [MITM]
 hostname = %APPEND% app.bilibili.com, api.bilibili.com, *.bilivideo.*, *.biliapi.com, -broadcast.chat.bilibili.com, -*cdn*.biliapi.net
