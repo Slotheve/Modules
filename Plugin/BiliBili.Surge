@@ -11,7 +11,7 @@ URL-REGEX,^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.comic\/flash,REJE
 
 [URL Rewrite]
 ^https?:\/\/((?!cn-jsnt-ct-01).*)(-*-|mcdn)((?!cn-jsnt-ct-01).*)\.bilivideo\.(cn|com)\/upgcxcode https://cn-jsnt-ct-01-01.bilivideo.com/upgcxcode 302
-^https?:\/\/*\.mcdn\.bilivideo\.com - reject
+^https?:\/\/*\.mcdn\.bilivideo\.com https://upos-sz-mirrorali.bilivideo.com 302
 ^https?:\/\/api\.bilibili\.com\/pgc\/season\/player\/cards - reject
 ^https:\/\/(api\.bilibili\.com\/x\/mengqi\/v1\/resource|app\.bilibili\.com\/x\/resource\/peak\/download)\? - reject
 ^https?:\/\/api\.bilibili\.com\/x\/vip\/ads\/material\/report - reject
