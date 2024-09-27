@@ -1,6 +1,5 @@
 #!name=BiliBili Pure
 #!desc=哔哩哔哩去广告+重定向
-#!system=ios
 #!category=Bilibili
 
 [Rule]
