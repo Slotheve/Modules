@@ -3,7 +3,6 @@
 #!category=Bilibili
 
 [Rule]
-DOMAIN-KEYWORD,.mcdn.bi,REJECT-DROP
 DOMAIN,cm.bilibili.com,REJECT-DROP
 URL-REGEX,^https?:\/\/api\.bilibili\.com\/x\/v2\/dm\/ad,REJECT-DROP
 URL-REGEX,^https?:\/\/api\.bilibili\.com\/pgc\/season\/app\/related\/recommend\?,REJECT-DROP
@@ -12,6 +11,7 @@ URL-REGEX,^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.comic\/flash,REJE
 [URL Rewrite]
 ^https?:\/\/((?!upos-sz-mirrorali).*)(-*-|mcdn)((?!upos-sz-mirrorali).*)\.bilivideo\.(com|cn)\/upgcxcode https://upos-sz-mirrorali.bilivideo.com/upgcxcode header
 ^https?:\/\/*\.mcdn\.bilivideo\.(com|cn)\/upgcxcode https://upos-sz-mirrorali.bilivideo.com\/upgcxcode 302
+^https?:\/\/*\.mcdn\.bilivideo\.(com|cn) - reject
 ^https?:\/\/api\.bilibili\.com\/pgc\/season\/player\/cards - reject
 ^https:\/\/(api\.bilibili\.com\/x\/mengqi\/v1\/resource|app\.bilibili\.com\/x\/resource\/peak\/download)\? - reject
 ^https?:\/\/api\.bilibili\.com\/x\/vip\/ads\/material\/report - reject
