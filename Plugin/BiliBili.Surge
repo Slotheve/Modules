@@ -22,4 +22,4 @@ URL-REGEX,^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.comic\/flash,REJE
 ^https?:\/\/app\.bilibili\.com\/x\/resource\/ip - reject
 
 [MITM]
-hostname = %APPEND% app.bilibili.com, api.bilibili.com, *.bilivideo.*, *.biliapi.com, -broadcast.chat.bilibili.com, -*cdn*.biliapi.net
+hostname = %APPEND% app.bilibili.com, api.bilibili.com, +.bilivideo.*, *.biliapi.com, -broadcast.chat.bilibili.com, -*cdn*.biliapi.net
