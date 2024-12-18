@@ -9,10 +9,10 @@ URL-REGEX,^https?:\/\/api\.bilibili\.com\/pgc\/season\/app\/related\/recommend\?
 URL-REGEX,^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.comic\/flash,REJECT-DROP
 
 [URL Rewrite]
-^https?:\/\/((?!upos-sz-mirrorali).*)(-*-|mcdn)((?!upos-sz-mirrorali).*)\.bilivideo\.(com|cn)\:*\/ https://upos-sz-mirrorali.bilivideo.com/ header
-^https?:\/\/((?!upos-sz-mirrorali).*)(-*-|mcdn)((?!upos-sz-mirrorali).*)\.bilivideo\.(com|cn)\/ https://upos-sz-mirrorali.bilivideo.com/ header
-^https?:\/\/*\.mcdn\.bilivideo\.(com|cn)\:*\/ https://upos-sz-mirrorali.bilivideo.com/ header
-^https?:\/\/*\.mcdn\.bilivideo\.(com|cn)\/ https://upos-sz-mirrorali.bilivideo.com/ header
+^https?:\/\/((?!upos-sz-mirrorali).*)(-*-|mcdn)((?!upos-sz-mirrorali).*)\.bilivideo\.(com|cn)\:*\/upgcxcode https://upos-sz-mirrorali.bilivideo.com/upgcxcode 302
+^https?:\/\/((?!upos-sz-mirrorali).*)(-*-|mcdn)((?!upos-sz-mirrorali).*)\.bilivideo\.(com|cn)\/upgcxcode https://upos-sz-mirrorali.bilivideo.com/upgcxcode 302
+^https?:\/\/*\.mcdn\.bilivideo\.(com|cn)\:*\/upgcxcode https://upos-sz-mirrorali.bilivideo.com/upgcxcode 302
+^https?:\/\/*\.mcdn\.bilivideo\.(com|cn)\/upgcxcode https://upos-sz-mirrorali.bilivideo.com/upgcxcode 302
 ^https?:\/\/*\.mcdn\.bilivideo\.(com|cn)\:* - reject
 ^https?:\/\/api\.bilibili\.com\/pgc\/season\/player\/cards - reject
 ^https:\/\/(api\.bilibili\.com\/x\/mengqi\/v1\/resource|app\.bilibili\.com\/x\/resource\/peak\/download)\? - reject
